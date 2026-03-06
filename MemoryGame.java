@@ -41,3 +41,17 @@ public class MemoryGame1
    while (play)
    {
      rounds++;
+     // role switch #1
+
+
+     // TO DO: Call the next method in RandomPermutation to create a random version
+     // of the "memory strings"
+     String[] shuffled = RandomPermutation.next(memoryStrings);
+
+
+     // Build a sequence of the desired length (lets you demonstrate varied lengths)
+     String[] randomSeq = new String[seqLen];
+     for (int i = 0; i < seqLen; i++)
+     {
+       randomSeq[i] = shuffled[i];
+     }
