@@ -55,3 +55,31 @@ public class MemoryGame1
      {
        randomSeq[i] = shuffled[i];
      }
+    // role switch #2
+
+
+     // TO DO: Play one sequence with a .5 second delay. Save the player's guess.
+     // (Later, you can speed up or slow down the game.)
+     String guess = game.playSequence(randomSeq, delay);
+
+
+     // TO DO: If the guess is not null, determine a match
+     if (guess == null)
+     {
+       // user click cancel on input screen
+       break;
+     }
+
+
+     // TO DO: Cleanup the guess - repalce commas and spaces with the empty string.
+     // Refer to a new String method replace.
+     guess = guess.replace(",", "").replace(" ", "").trim();
+
+
+     // Build the correct answer string from the sequence shown
+     String correct = "";
+     for (int i = 0; i < randomSeq.length; i++)
+     {
+       correct += randomSeq[i];
+     }
+
