@@ -83,3 +83,50 @@ public class MemoryGame1
        correct += randomSeq[i];
      }
 
+
+     // role switch #3
+
+
+     // TO DO: Iterate to determine if all elements of the guess match sequence
+     boolean matched = true;
+
+
+     // handles: no input + longer/shorter input 
+     if (guess.length() != correct.length())
+     {
+       matched = false;
+     }
+     else
+     {
+       for (int i = 0; i < correct.length(); i++)
+       {
+         if (guess.charAt(i) != correct.charAt(i))
+         {
+           matched = false;
+           break;
+         }
+       }
+     }
+
+
+     // If match, signal a match, otherwise, try again
+     if (matched)
+     {
+       game.matched();
+       // increase score
+       score++;
+
+
+       // optional: increase difficulty which is varied length 
+       if (increaseDifficulty && seqLen < memoryStrings.length)
+       {
+         seqLen++;
+       }
+     }
+     else
+     {
+       game.tryAgain();
+     }
+
+
+
