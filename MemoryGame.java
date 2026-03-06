@@ -127,6 +127,22 @@ public class MemoryGame1
      {
        game.tryAgain();
      }
+    // role switch #4
+    
+
+
+     // TO DO: Ask if user wants to play another round of the game
+     // and track the number of games played.
+     play = game.playAgain();
+   }
+
+
+   // When done playing, show score and end the game.
+   game.showScore(score, rounds);
+   game.quit();
+ }
+}
+
 
 
 
